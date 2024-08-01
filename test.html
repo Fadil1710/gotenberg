@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page for Gotenberg Screenshot</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding-top: 50px; }
+    </style>
+</head>
+<body>
+    Hi
+    <script type="application/javascript">
+        var globalVar = 'notReady'
+    
+        const delay = ms => new Promise(res => setTimeout(res, ms))
+        delay(5000).then(() => {
+            document.getElementsByTagName('body')[0].innerHTML = "Script Loaded";
+            window.globalVar = 'ready'
+        })
+    </script>
+</body>
+</html>
